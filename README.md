@@ -1,4 +1,50 @@
-# Gilded Rose Refactoring Kata
+# Gilded Rose Krav Specifikation
+
+Hej och välkommen till teamet Gilded Rose. Som ni vet är vi ett litet värdshus med ett utmärkt läge i en
+framstående stad som drivs av en vänlig gästgivare som heter Allison. Vi köper och säljer bara de finaste varorna.
+Tyvärr försämras våra varor ständigt i kvalitet när de närmar sig deras försäljning efter datum. Vi
+har ett system på plats som uppdaterar vårt lager för oss. Det utvecklades av en no-nonsense typ som heter
+Leeroy, som har gått vidare till nya äventyr. Din uppgift är att lägga till den nya funktionen i vårt system så att
+vi kan börja sälja en ny kategori av varor. Först en introduktion till vårt system:
+
+- Alla artiklar har ett SellIn -värde som anger antalet dagar vi har att sälja varan
+- Alla artiklar har ett Quality som anger hur värdefullt objektet är
+- I slutet av varje dag sänker vårt system båda värdena för varje objekt
+
+Ganska enkelt, eller hur? Det är här det blir intressant:
+
+- När försäljningsdatumet (SellIn) har passerat försämras kvaliteten (Quality) dubbelt så snabbt
+- Kvaliteten (Quality) på en vara är aldrig negativ
+- "Aged Brie" ökar faktiskt i kvalitet (Quality) ju äldre den blir
+- Kvaliteten (Quality) på ett objekt är aldrig mer än 50
+- "Sulfuras", som en legendarisk vara, behöver aldrig säljas eller minska i kvalitet
+- "Backstage passes", liksom "Aged Brie", ökar i kvalitet (Quality) när dess SellIn-värde närmar sig;
+Kvalitet (Quality) ökar med 2 när det är 10 dagar eller mindre och med 3 när det är 5 dagar eller mindre men
+Kvaliteten (Quality) sjunker till 0 efter konserten
+
+Vi har nyligen tecknat en leverantör av "Conjured" varor. Detta kräver en uppdatering av vårt system:
+
+- "Conjured" artiklar försämras i kvalitet dubbelt så snabbt som vanliga föremål
+
+Gör gärna några ändringar i UpdateQuality -metoden och lägg till ny kod så länge som allt
+fungerar fortfarande korrekt. Ändra dock inte "Item" klassen eller dess egenskaper eftersom de tillhör
+goblin i hörnet som kommer att bli ilskna och skjuta dig eftersom han inte tror på delad kod
+ägande (du kan göra UpdateQuality -metoden och Item egenskaper statisk om du vill, vi täcker
+till dig).
+
+Bara för att klargöra kan en vara aldrig få sin kvalitetshöjning över 50, men "Sulfuras" är en
+legendarisk vara och som sådan är dess kvalitet 80 och den ändras aldrig.
+
+
+
+&nbsp;
+---
+&nbsp;
+
+
+
+# Original Gilded Rose Refactoring Kata readme/description
+
 
 This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/).
 
